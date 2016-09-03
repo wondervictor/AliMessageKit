@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9F9D433EF26329A0918D9B7F19DCAB581FF8DFA9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9F9D433EF26329A0918D9B7F19DCAB581FF8DFA9" : 0,
+    "1A678A5E7DCDE9E3FEEDC5247B7AA68AAE857EC6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "193F9B0C-3AA3-432D-B180-B9841EEAF2FD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9F9D433EF26329A0918D9B7F19DCAB581FF8DFA9" : "AliMessageKitDemo\/",
+    "1A678A5E7DCDE9E3FEEDC5247B7AA68AAE857EC6" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AliMessageKitDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AliMessageKitDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wondervictor\/AliMessageKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1A678A5E7DCDE9E3FEEDC5247B7AA68AAE857EC6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wondervictor\/AliMessageKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F9D433EF26329A0918D9B7F19DCAB581FF8DFA9"
+    }
+  ]
+}

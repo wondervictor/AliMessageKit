@@ -74,12 +74,43 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
     self.appScret = appScrect;
 }
 
+/// Network
+- (void)requestWithURLString:(NSString *)urlString withParameters:(NSDictionary *)parameters completition:(void(^)(id response, NSError *error))block {
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:urlString]];
+    
+    request.HTTPMethod = @"POST";
+    
+    NSMutableString *query = [NSMutableString new];
+    
+    [parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+       
+        NSString *paramKey = key;
+        NSString *paramObj = obj;
+        [query appendFormat:@"%@=%@&",paramKey,paramObj];
+    }];
 
-- (void)requestWithURLString:(NSString *)urlString withParameters:(NSDictionary *)parameters {
+    NSData *body = [[query substringToIndex:query.length - 1]dataUsingEncoding:NSUTF8StringEncoding];
+    
+    request.HTTPBody = body;
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        block(data, error);
+    }];
+    
+    [dataTask resume];
     
 }
 
-
+- (NSString *)getTimestamp {
+    /// format : yyyy-MM-dd HH:mm:ss
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateString = [formatter stringFromDate:date];
+    return dateString;
+}
 
 /// MD5
 - (NSString *)getMD5StringWithString:(NSString *)string {
