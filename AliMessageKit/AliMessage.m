@@ -11,12 +11,16 @@
 
 @interface AliMessage()
 
+/// App Screct: Ali will provide you with a screct for this service.
 @property (nonatomic, strong, readwrite) NSString *appScret;
-
+/// App Key: the same as App Screct.
 @property (nonatomic, strong, readwrite) NSString *appKey;
-
-
-
+/// Session for Authorization, optional default is "Session"/
+@property (nonatomic, strong, readwrite) NSString *sessionString;
+/// SMS Template Code the code for your template which was set when you apply for this app.
+@property (nonatomic, strong, readwrite) NSString *smsTemplateCode;
+/// receiveNumber the user phone number
+@property (nonatomic, strong, readwrite) NSString *receiveNumber;
 
 @end
 
@@ -29,6 +33,15 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
 
 + (AliMessage *)manager {
     return [[[self class]alloc]init];
+}
+
+- (instancetype)initWithDefaultConfiguration {
+    self = [super init];
+    if (self) {
+        self.sessionString = @"session";
+        
+    }
+    return self;
 }
 
 - (instancetype)initWithAppKey:(NSString *)appKey appScrect:(NSString *)appScrect {
@@ -47,6 +60,14 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
     
     
 }
+
+- (BOOL)checkPhoneAvaiableWith:(NSString *)phone {
+    
+
+    return NO;
+}
+
+
 
 - (void)setAppKey:(NSString *)appKey appScrect:(NSString *)appScrect {
     self.appKey = appKey;
