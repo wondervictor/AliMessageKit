@@ -17,10 +17,8 @@
 @property (nonatomic, strong, readwrite) NSString *appKey;
 /// Session for Authorization, optional default is "Session"/
 @property (nonatomic, strong, readwrite) NSString *sessionString;
-/// SMS Template Code the code for your template which was set when you apply for this app.
-@property (nonatomic, strong, readwrite) NSString *smsTemplateCode;
-/// receiveNumber the user phone number
-@property (nonatomic, strong, readwrite) NSString *receiveNumber;
+
+@property (nonatomic, copy, readwrite) NSString *code;
 
 @end
 
@@ -31,18 +29,22 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
 
 @implementation AliMessage
 
-+ (AliMessage *)manager {
-    return [[[self class]alloc]init];
-}
 
 - (instancetype)initWithDefaultConfiguration {
     self = [super init];
     if (self) {
+        self.verifyCodeCount = 6;
         self.sessionString = @"session";
-        
     }
     return self;
 }
+
+
++ (AliMessage *)manager {
+    return [[[self class]alloc]initWithDefaultConfiguration];
+}
+
+
 
 - (instancetype)initWithAppKey:(NSString *)appKey appScrect:(NSString *)appScrect {
     self = [super init];
@@ -53,20 +55,76 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
     return self;
 }
 
-- (void)sendMessage:(NSString *)phone withBlock:(void (^)(NSString *, NSString *))block {
+- (void)sendMessage:(NSString *)phone withBlock:(void (^)(NSString *code, NSString *error))block {
     
+    if (![self checkPhoneAvaiableWith:phone]) {
+        block(nil, @"手机号输入错误");
+        return;
+    }
+    NSString *timestamp = [self getTimestamp];
+    NSDictionary *parameters = @{@"format":@"json",
+                                 @"v":@"2.0",
+                                 @"method":method,
+                                 @"app_key":self.appKey,
+                                 @"sign_method":@"md5",
+                                 @"session":self.sessionString,
+                                 @"timestamp":timestamp,
+                                 @"sms_type":@"normal",
+                                 @"sS":self.freeSignName,
+                                 @"sms_param":self.smsParam,
+                                 @"rec_num":phone,
+                                 @"sms_template_code":self.smsTemplateCode
+                                 };
     
+    NSString *sign = [self getSignWithDict:parameters];
+    NSMutableDictionary *finalParam = [[NSMutableDictionary alloc]initWithDictionary:parameters];
+    [finalParam setObject:sign forKey:@"sign"];
     
+    NSString *code = self.code;
     
+    [self requestWithURLString:@"http://gw.api.taobao.com/router/rest" withParameters:finalParam completition:^(id response, NSError *error) {
+        if (error) {
+            block(nil, @"网络错误");
+            return ;
+        }
+        NSError *jsonError = nil;
+        id responseObj = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:&jsonError];
+        if (jsonError) {
+            block(nil, @"解析错误");
+            return;
+        } else {
+            NSDictionary *send_response = [responseObj valueForKey:@"alibaba_aliqin_fc_sms_num_send_response"];
+            if (send_response) {
+                NSDictionary *result = [send_response valueForKey:@"result"];
+                if (result) {
+                    NSString *errorCode = [result objectForKey:@"err_code"];
+                    if ([errorCode isEqualToString:@"0"]) {
+                        block(nil, code);
+                    } else {
+                        block(@"短信发送失败", code);
+                    }
+                } else {
+                    block(@"短信发送失败", code);
+                }
+            } else {
+                block(@"短信发送失败", code);
+            }
+
+        }
+    }];
     
 }
 
 - (BOOL)checkPhoneAvaiableWith:(NSString *)phone {
-    
-
-    return NO;
+    NSError *error = nil;
+    NSRegularExpression *regx = [[NSRegularExpression alloc]initWithPattern:@"^1[0-9]{10}$" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray *results = [regx matchesInString:phone options:0 range:NSMakeRange(0, phone.length)];
+    if (results.count == 0) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
-
 
 
 - (void)setAppKey:(NSString *)appKey appScrect:(NSString *)appScrect {
@@ -127,6 +185,43 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
 }
 
 
+
+- (NSString *)getSignWithDict:(NSDictionary *)params  {
+    NSMutableString *str = [NSMutableString new];
+    NSArray *keys = params.allKeys;
+    NSArray *sortKeys = [keys sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2 options:NSNumericSearch];
+    }];
+    
+    for (NSString *key in sortKeys) {
+        NSLog(@"%@",key);
+        [str appendFormat:@"%@%@",key,[params objectForKey:key]];
+    }
+    
+    NSString *signStr = [NSString stringWithFormat:@"%@%@%@",self.appScret,str,self.appScret];
+    NSString *sign = [self getMD5StringWithString:signStr];
+    return sign;
+}
+
+
+/// generate verification code
+- (NSString *)generateVerifyCode {
+    NSInteger code = 0;
+    for (int i = 0; i < self.verifyCodeCount; i ++) {
+        code = code * 10 + arc4random()%10;
+    }
+    self.code = [NSString stringWithFormat:@"%lu",code];
+    return self.code;
+}
+
+
+- (void)setSessionString:(NSString *)session {
+    self.sessionString = session;
+}
+
+- (void)setVerifyCodeCount:(NSInteger)verifyCodeCount {
+    self.verifyCodeCount = verifyCodeCount;
+}
 
 
 
