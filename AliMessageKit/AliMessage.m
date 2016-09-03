@@ -88,7 +88,6 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
                                  @"rec_num":phone,
                                  @"sms_template_code":self.smsTemplateCode
                                  };
-    
     NSString *sign = [self getSignWithDict:parameters];
     NSMutableDictionary *finalParam = [[NSMutableDictionary alloc]initWithDictionary:parameters];
     [finalParam setObject:sign forKey:@"sign"];
@@ -239,6 +238,8 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
 - (void)setVerifyCodeCount:(NSInteger)verifyCodeCount {
     self.verifyCodeCount = verifyCodeCount;
 }
+
+
 
 
 
