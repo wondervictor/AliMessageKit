@@ -12,12 +12,12 @@
 @interface AliMessage()
 
 /// App Screct: Ali will provide you with a screct for this service.
-@property (nonatomic, strong, readwrite) NSString *appScret;
+@property (nonatomic, strong, readwrite) NSString *appSecret;
 /// App Key: the same as App Screct.
 @property (nonatomic, strong, readwrite) NSString *appKey;
 /// Session for Authorization, optional default is "Session"/
 @property (nonatomic, strong, readwrite) NSString *sessionString;
-
+/// verification code
 @property (nonatomic, copy, readwrite) NSString *code;
 
 @end
@@ -40,17 +40,30 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
 }
 
 
++ (void)sendMessage:(NSString *)phone
+                 withAppKey:(NSString *)appkey
+                  appSecret:(NSString *)appSecret
+                   smsParam:(NSString *)smsParam
+            withResultBlock:(void (^)(NSString *, NSString *))block {
+    AliMessage *manager = [AliMessage manager];
+    manager.appKey = appkey;
+    manager.appSecret = appSecret;
+    manager.smsParam = smsParam;
+    [manager sendMessage:phone withBlock:^(NSString *code, NSString *error) {
+        block(code, error);
+    }];
+}
+
+
 + (AliMessage *)manager {
     return [[[self class]alloc]initWithDefaultConfiguration];
 }
 
-
-
-- (instancetype)initWithAppKey:(NSString *)appKey appScrect:(NSString *)appScrect {
+- (instancetype)initWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret {
     self = [super init];
     if (self) {
         self.appKey = appKey;
-        self.appScret = appScrect;
+        self.appSecret = appSecret;
     }
     return self;
 }
@@ -101,13 +114,13 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
                     if ([errorCode isEqualToString:@"0"]) {
                         block(nil, code);
                     } else {
-                        block(@"短信发送失败", code);
+                        block(nil, @"短信发送失败");
                     }
                 } else {
-                    block(@"短信发送失败", code);
+                    block(nil, @"短信发送失败");
                 }
             } else {
-                block(@"短信发送失败", code);
+                block(nil, @"短信发送失败");
             }
 
         }
@@ -127,9 +140,9 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
 }
 
 
-- (void)setAppKey:(NSString *)appKey appScrect:(NSString *)appScrect {
+- (void)setAppKey:(NSString *)appKey appSecret:(NSString *)appSecret {
     self.appKey = appKey;
-    self.appScret = appScrect;
+    self.appSecret = appSecret;
 }
 
 /// Network
@@ -198,7 +211,7 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
         [str appendFormat:@"%@%@",key,[params objectForKey:key]];
     }
     
-    NSString *signStr = [NSString stringWithFormat:@"%@%@%@",self.appScret,str,self.appScret];
+    NSString *signStr = [NSString stringWithFormat:@"%@%@%@",self.appSecret,str,self.appSecret];
     NSString *sign = [self getMD5StringWithString:signStr];
     return sign;
 }
@@ -212,6 +225,10 @@ static NSString *const method = @"alibaba.aliqin.fc.sms.num.send";
     }
     self.code = [NSString stringWithFormat:@"%lu",code];
     return self.code;
+}
+
+- (void)setSmsParam:(NSString *)smsParam {
+    self.smsParam = smsParam;
 }
 
 

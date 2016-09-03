@@ -26,16 +26,40 @@
  **/
 + (AliMessage *)manager;
 
-- (instancetype)initWithAppKey:(NSString *)appKey appScrect:(NSString *)appScrect;
+/**
+ * @name    send Message (convenience method)
+ * @param   phone
+ * @param   AppKey provided by Ali Service
+ * @param   AppSecret provided by Ali Service
+ * @param   SMS Param(JSON) `{"code":"1234","product":"alidayu"}`
+ * @param   block to handle the result of the process
+ **/
 
++ (void)sendMessage:(NSString *)phone
+         withAppKey:(NSString *)appkey
+          appSecret:(NSString *)appSecret
+           smsParam:(NSString *)smsParam
+    withResultBlock:(void(^)(NSString *code, NSString *error))block;
+
+/**
+ * @name    init method
+ * @param   AppKey provided by Ali Service
+ * @param   AppSecret provided by Ali Service
+ **/
+- (instancetype)initWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret;
+
+/**
+ * @name    SMS Param(JSON) `{"code":"1234","product":"alidayu"}`
+ **/
+- (void)setSmsParam:(NSString *)smsParam;
 
 
 /**
- * @name    set AppKey and AppScrect
+ * @name    set AppKey and AppSecret
  * @param   appkey
  * @param   appScrect
  **/
-- (void)setAppKey:(NSString *)appKey appScrect:(NSString *)appScrect;
+- (void)setAppKey:(NSString *)appKey appSecret:(NSString *)appSecret;
 
 /**
  * @name    sendMessage
@@ -65,5 +89,7 @@
  * @return  code(String)
  **/
 - (NSString *)generateVerifyCode;
+
+
 
 @end
