@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E81988B1D7AF96900567C91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E81988A1D7AF96900567C91 /* main.m */; };
+		2E81988E1D7AF96900567C91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E81988D1D7AF96900567C91 /* AppDelegate.m */; };
+		2E8198911D7AF96900567C91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8198901D7AF96900567C91 /* ViewController.m */; };
+		2E8198941D7AF96900567C91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8198921D7AF96900567C91 /* Main.storyboard */; };
+		2E8198961D7AF96900567C91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8198951D7AF96900567C91 /* Assets.xcassets */; };
+		2E8198991D7AF96900567C91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8198971D7AF96900567C91 /* LaunchScreen.storyboard */; };
+		2E8198A41D7AF96900567C91 /* AliMessageKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8198A31D7AF96900567C91 /* AliMessageKitDemoTests.m */; };
+		2E8198AF1D7AF96900567C91 /* AliMessageKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8198AE1D7AF96900567C91 /* AliMessageKitDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E8198A01D7AF96900567C91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E81987E1D7AF96800567C91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E8198851D7AF96800567C91;
+			remoteInfo = AliMessageKitDemo;
+		};
+		2E8198AB1D7AF96900567C91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E81987E1D7AF96800567C91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E8198851D7AF96800567C91;
+			remoteInfo = AliMessageKitDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E8198861D7AF96800567C91 /* AliMessageKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliMessageKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E81988A1D7AF96900567C91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E81988C1D7AF96900567C91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E81988D1D7AF96900567C91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E81988F1D7AF96900567C91 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2E8198901D7AF96900567C91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E8198931D7AF96900567C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E8198951D7AF96900567C91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E8198981D7AF96900567C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E81989A1D7AF96900567C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E81989F1D7AF96900567C91 /* AliMessageKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliMessageKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E8198A31D7AF96900567C91 /* AliMessageKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliMessageKitDemoTests.m; sourceTree = "<group>"; };
+		2E8198A51D7AF96900567C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8198AA1D7AF96900567C91 /* AliMessageKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliMessageKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E8198AE1D7AF96900567C91 /* AliMessageKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliMessageKitDemoUITests.m; sourceTree = "<group>"; };
+		2E8198B01D7AF96900567C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E8198831D7AF96800567C91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81989C1D7AF96900567C91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8198A71D7AF96900567C91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E81987D1D7AF96800567C91 = {
+			isa = PBXGroup;
+			children = (
+				2E8198881D7AF96900567C91 /* AliMessageKitDemo */,
+				2E8198A21D7AF96900567C91 /* AliMessageKitDemoTests */,
+				2E8198AD1D7AF96900567C91 /* AliMessageKitDemoUITests */,
+				2E8198871D7AF96800567C91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E8198871D7AF96800567C91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E8198861D7AF96800567C91 /* AliMessageKitDemo.app */,
+				2E81989F1D7AF96900567C91 /* AliMessageKitDemoTests.xctest */,
+				2E8198AA1D7AF96900567C91 /* AliMessageKitDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E8198881D7AF96900567C91 /* AliMessageKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2E81988C1D7AF96900567C91 /* AppDelegate.h */,
+				2E81988D1D7AF96900567C91 /* AppDelegate.m */,
+				2E81988F1D7AF96900567C91 /* ViewController.h */,
+				2E8198901D7AF96900567C91 /* ViewController.m */,
+				2E8198921D7AF96900567C91 /* Main.storyboard */,
+				2E8198951D7AF96900567C91 /* Assets.xcassets */,
+				2E8198971D7AF96900567C91 /* LaunchScreen.storyboard */,
+				2E81989A1D7AF96900567C91 /* Info.plist */,
+				2E8198891D7AF96900567C91 /* Supporting Files */,
+			);
+			path = AliMessageKitDemo;
+			sourceTree = "<group>";
+		};
+		2E8198891D7AF96900567C91 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E81988A1D7AF96900567C91 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E8198A21D7AF96900567C91 /* AliMessageKitDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E8198A31D7AF96900567C91 /* AliMessageKitDemoTests.m */,
+				2E8198A51D7AF96900567C91 /* Info.plist */,
+			);
+			path = AliMessageKitDemoTests;
+			sourceTree = "<group>";
+		};
+		2E8198AD1D7AF96900567C91 /* AliMessageKitDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E8198AE1D7AF96900567C91 /* AliMessageKitDemoUITests.m */,
+				2E8198B01D7AF96900567C91 /* Info.plist */,
+			);
+			path = AliMessageKitDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E8198851D7AF96800567C91 /* AliMessageKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E8198B31D7AF96900567C91 /* Build configuration list for PBXNativeTarget "AliMessageKitDemo" */;
+			buildPhases = (
+				2E8198821D7AF96800567C91 /* Sources */,
+				2E8198831D7AF96800567C91 /* Frameworks */,
+				2E8198841D7AF96800567C91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AliMessageKitDemo;
+			productName = AliMessageKitDemo;
+			productReference = 2E8198861D7AF96800567C91 /* AliMessageKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E81989E1D7AF96900567C91 /* AliMessageKitDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E8198B61D7AF96900567C91 /* Build configuration list for PBXNativeTarget "AliMessageKitDemoTests" */;
+			buildPhases = (
+				2E81989B1D7AF96900567C91 /* Sources */,
+				2E81989C1D7AF96900567C91 /* Frameworks */,
+				2E81989D1D7AF96900567C91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E8198A11D7AF96900567C91 /* PBXTargetDependency */,
+			);
+			name = AliMessageKitDemoTests;
+			productName = AliMessageKitDemoTests;
+			productReference = 2E81989F1D7AF96900567C91 /* AliMessageKitDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E8198A91D7AF96900567C91 /* AliMessageKitDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E8198B91D7AF96900567C91 /* Build configuration list for PBXNativeTarget "AliMessageKitDemoUITests" */;
+			buildPhases = (
+				2E8198A61D7AF96900567C91 /* Sources */,
+				2E8198A71D7AF96900567C91 /* Frameworks */,
+				2E8198A81D7AF96900567C91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E8198AC1D7AF96900567C91 /* PBXTargetDependency */,
+			);
+			name = AliMessageKitDemoUITests;
+			productName = AliMessageKitDemoUITests;
+			productReference = 2E8198AA1D7AF96900567C91 /* AliMessageKitDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E81987E1D7AF96800567C91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = VicChan;
+				TargetAttributes = {
+					2E8198851D7AF96800567C91 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 23D5PVYLWJ;
+					};
+					2E81989E1D7AF96900567C91 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 23D5PVYLWJ;
+						TestTargetID = 2E8198851D7AF96800567C91;
+					};
+					2E8198A91D7AF96900567C91 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 23D5PVYLWJ;
+						TestTargetID = 2E8198851D7AF96800567C91;
+					};
+				};
+			};
+			buildConfigurationList = 2E8198811D7AF96800567C91 /* Build configuration list for PBXProject "AliMessageKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E81987D1D7AF96800567C91;
+			productRefGroup = 2E8198871D7AF96800567C91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E8198851D7AF96800567C91 /* AliMessageKitDemo */,
+				2E81989E1D7AF96900567C91 /* AliMessageKitDemoTests */,
+				2E8198A91D7AF96900567C91 /* AliMessageKitDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E8198841D7AF96800567C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8198991D7AF96900567C91 /* LaunchScreen.storyboard in Resources */,
+				2E8198961D7AF96900567C91 /* Assets.xcassets in Resources */,
+				2E8198941D7AF96900567C91 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81989D1D7AF96900567C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8198A81D7AF96900567C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E8198821D7AF96800567C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8198911D7AF96900567C91 /* ViewController.m in Sources */,
+				2E81988E1D7AF96900567C91 /* AppDelegate.m in Sources */,
+				2E81988B1D7AF96900567C91 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E81989B1D7AF96900567C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8198A41D7AF96900567C91 /* AliMessageKitDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8198A61D7AF96900567C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8198AF1D7AF96900567C91 /* AliMessageKitDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E8198A11D7AF96900567C91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E8198851D7AF96800567C91 /* AliMessageKitDemo */;
+			targetProxy = 2E8198A01D7AF96900567C91 /* PBXContainerItemProxy */;
+		};
+		2E8198AC1D7AF96900567C91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E8198851D7AF96800567C91 /* AliMessageKitDemo */;
+			targetProxy = 2E8198AB1D7AF96900567C91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E8198921D7AF96900567C91 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E8198931D7AF96900567C91 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E8198971D7AF96900567C91 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E8198981D7AF96900567C91 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E8198B11D7AF96900567C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2E8198B21D7AF96900567C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E8198B41D7AF96900567C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AliMessageKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Victor.AliMessageKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E8198B51D7AF96900567C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AliMessageKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Victor.AliMessageKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2E8198B71D7AF96900567C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AliMessageKitDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Victor.AliMessageKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AliMessageKitDemo.app/AliMessageKitDemo";
+			};
+			name = Debug;
+		};
+		2E8198B81D7AF96900567C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AliMessageKitDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Victor.AliMessageKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AliMessageKitDemo.app/AliMessageKitDemo";
+			};
+			name = Release;
+		};
+		2E8198BA1D7AF96900567C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AliMessageKitDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Victor.AliMessageKitDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AliMessageKitDemo;
+			};
+			name = Debug;
+		};
+		2E8198BB1D7AF96900567C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AliMessageKitDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Victor.AliMessageKitDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AliMessageKitDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E8198811D7AF96800567C91 /* Build configuration list for PBXProject "AliMessageKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8198B11D7AF96900567C91 /* Debug */,
+				2E8198B21D7AF96900567C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E8198B31D7AF96900567C91 /* Build configuration list for PBXNativeTarget "AliMessageKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8198B41D7AF96900567C91 /* Debug */,
+				2E8198B51D7AF96900567C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E8198B61D7AF96900567C91 /* Build configuration list for PBXNativeTarget "AliMessageKitDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8198B71D7AF96900567C91 /* Debug */,
+				2E8198B81D7AF96900567C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E8198B91D7AF96900567C91 /* Build configuration list for PBXNativeTarget "AliMessageKitDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8198BA1D7AF96900567C91 /* Debug */,
+				2E8198BB1D7AF96900567C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E81987E1D7AF96800567C91 /* Project object */;
+}
