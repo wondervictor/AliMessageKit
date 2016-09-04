@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E81988B1D7AF96900567C91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E81988A1D7AF96900567C91 /* main.m */; };
-		2E81988E1D7AF96900567C91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E81988D1D7AF96900567C91 /* AppDelegate.m */; };
-		2E8198911D7AF96900567C91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8198901D7AF96900567C91 /* ViewController.m */; };
-		2E8198941D7AF96900567C91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8198921D7AF96900567C91 /* Main.storyboard */; };
-		2E8198961D7AF96900567C91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8198951D7AF96900567C91 /* Assets.xcassets */; };
-		2E8198991D7AF96900567C91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8198971D7AF96900567C91 /* LaunchScreen.storyboard */; };
-		2E8198A41D7AF96900567C91 /* AliMessageKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8198A31D7AF96900567C91 /* AliMessageKitDemoTests.m */; };
-		2E8198AF1D7AF96900567C91 /* AliMessageKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8198AE1D7AF96900567C91 /* AliMessageKitDemoUITests.m */; };
 		2E8198C01D7AFA1A00567C91 /* AliMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8198BF1D7AFA1A00567C91 /* AliMessage.m */; };
 /* End PBXBuildFile section */
 
@@ -37,21 +29,8 @@
 
 /* Begin PBXFileReference section */
 		2E8198861D7AF96800567C91 /* AliMessageKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliMessageKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E81988A1D7AF96900567C91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2E81988C1D7AF96900567C91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2E81988D1D7AF96900567C91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E81988F1D7AF96900567C91 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2E8198901D7AF96900567C91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2E8198931D7AF96900567C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2E8198951D7AF96900567C91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2E8198981D7AF96900567C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2E81989A1D7AF96900567C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E81989F1D7AF96900567C91 /* AliMessageKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliMessageKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E8198A31D7AF96900567C91 /* AliMessageKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliMessageKitDemoTests.m; sourceTree = "<group>"; };
-		2E8198A51D7AF96900567C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8198AA1D7AF96900567C91 /* AliMessageKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliMessageKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E8198AE1D7AF96900567C91 /* AliMessageKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliMessageKitDemoUITests.m; sourceTree = "<group>"; };
-		2E8198B01D7AF96900567C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8198BE1D7AFA1A00567C91 /* AliMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliMessage.h; sourceTree = "<group>"; };
 		2E8198BF1D7AFA1A00567C91 /* AliMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,9 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				2E8198BD1D7AFA1A00567C91 /* AliMessageKit */,
-				2E8198881D7AF96900567C91 /* AliMessageKitDemo */,
-				2E8198A21D7AF96900567C91 /* AliMessageKitDemoTests */,
-				2E8198AD1D7AF96900567C91 /* AliMessageKitDemoUITests */,
 				2E8198871D7AF96800567C91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,48 +76,6 @@
 				2E8198AA1D7AF96900567C91 /* AliMessageKitDemoUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2E8198881D7AF96900567C91 /* AliMessageKitDemo */ = {
-			isa = PBXGroup;
-			children = (
-				2E81988C1D7AF96900567C91 /* AppDelegate.h */,
-				2E81988D1D7AF96900567C91 /* AppDelegate.m */,
-				2E81988F1D7AF96900567C91 /* ViewController.h */,
-				2E8198901D7AF96900567C91 /* ViewController.m */,
-				2E8198921D7AF96900567C91 /* Main.storyboard */,
-				2E8198951D7AF96900567C91 /* Assets.xcassets */,
-				2E8198971D7AF96900567C91 /* LaunchScreen.storyboard */,
-				2E81989A1D7AF96900567C91 /* Info.plist */,
-				2E8198891D7AF96900567C91 /* Supporting Files */,
-			);
-			path = AliMessageKitDemo;
-			sourceTree = "<group>";
-		};
-		2E8198891D7AF96900567C91 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2E81988A1D7AF96900567C91 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2E8198A21D7AF96900567C91 /* AliMessageKitDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				2E8198A31D7AF96900567C91 /* AliMessageKitDemoTests.m */,
-				2E8198A51D7AF96900567C91 /* Info.plist */,
-			);
-			path = AliMessageKitDemoTests;
-			sourceTree = "<group>";
-		};
-		2E8198AD1D7AF96900567C91 /* AliMessageKitDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2E8198AE1D7AF96900567C91 /* AliMessageKitDemoUITests.m */,
-				2E8198B01D7AF96900567C91 /* Info.plist */,
-			);
-			path = AliMessageKitDemoUITests;
 			sourceTree = "<group>";
 		};
 		2E8198BD1D7AFA1A00567C91 /* AliMessageKit */ = {
@@ -259,9 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8198991D7AF96900567C91 /* LaunchScreen.storyboard in Resources */,
-				2E8198961D7AF96900567C91 /* Assets.xcassets in Resources */,
-				2E8198941D7AF96900567C91 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,10 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8198911D7AF96900567C91 /* ViewController.m in Sources */,
-				2E81988E1D7AF96900567C91 /* AppDelegate.m in Sources */,
 				2E8198C01D7AFA1A00567C91 /* AliMessage.m in Sources */,
-				2E81988B1D7AF96900567C91 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8198A41D7AF96900567C91 /* AliMessageKitDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +232,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8198AF1D7AF96900567C91 /* AliMessageKitDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,25 +249,6 @@
 			targetProxy = 2E8198AB1D7AF96900567C91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2E8198921D7AF96900567C91 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E8198931D7AF96900567C91 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2E8198971D7AF96900567C91 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E8198981D7AF96900567C91 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2E8198B11D7AF96900567C91 /* Debug */ = {
